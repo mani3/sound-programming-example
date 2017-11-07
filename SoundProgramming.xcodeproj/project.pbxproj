@@ -7,12 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31A4FC2B1FB1D68800F6BA41 /* wavlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 31CF967E1FA7663E0076F8B5 /* wavlib.c */; };
+		31A4FC2C1FB1DD3A00F6BA41 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31A4FC291FB1D68100F6BA41 /* main.c */; };
 		31CF966B1FA764420076F8B5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31CF966A1FA764420076F8B5 /* main.c */; };
 		31CF967C1FA764B30076F8B5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31CF967B1FA764B30076F8B5 /* main.c */; };
 		31CF967F1FA7663E0076F8B5 /* wavlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 31CF967E1FA7663E0076F8B5 /* wavlib.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		31A4FC201FB1D66B00F6BA41 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		31CF96651FA764420076F8B5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -34,6 +45,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		31A4FC221FB1D66B00F6BA41 /* Sine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sine; sourceTree = BUILT_PRODUCTS_DIR; };
+		31A4FC291FB1D68100F6BA41 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		31CF96671FA764420076F8B5 /* SoundProgramming */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SoundProgramming; sourceTree = BUILT_PRODUCTS_DIR; };
 		31CF966A1FA764420076F8B5 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		31CF967A1FA7648C0076F8B5 /* WavReader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WavReader; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +56,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		31A4FC1F1FB1D66B00F6BA41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		31CF96641FA764420076F8B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +83,7 @@
 		31CD18F61FADA1FC00BC2B0D /* Sine */ = {
 			isa = PBXGroup;
 			children = (
+				31A4FC291FB1D68100F6BA41 /* main.c */,
 			);
 			path = Sine;
 			sourceTree = "<group>";
@@ -80,6 +101,7 @@
 			children = (
 				31CF96671FA764420076F8B5 /* SoundProgramming */,
 				31CF967A1FA7648C0076F8B5 /* WavReader */,
+				31A4FC221FB1D66B00F6BA41 /* Sine */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +129,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		31A4FC211FB1D66B00F6BA41 /* Sine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31A4FC281FB1D66B00F6BA41 /* Build configuration list for PBXNativeTarget "Sine" */;
+			buildPhases = (
+				31A4FC1E1FB1D66B00F6BA41 /* Sources */,
+				31A4FC1F1FB1D66B00F6BA41 /* Frameworks */,
+				31A4FC201FB1D66B00F6BA41 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sine;
+			productName = Sine;
+			productReference = 31A4FC221FB1D66B00F6BA41 /* Sine */;
+			productType = "com.apple.product-type.tool";
+		};
 		31CF96661FA764420076F8B5 /* SoundProgramming */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31CF966E1FA764420076F8B5 /* Build configuration list for PBXNativeTarget "SoundProgramming" */;
@@ -150,6 +189,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = mani3;
 				TargetAttributes = {
+					31A4FC211FB1D66B00F6BA41 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 					31CF96661FA764420076F8B5 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
@@ -173,11 +216,21 @@
 			targets = (
 				31CF96661FA764420076F8B5 /* SoundProgramming */,
 				31CF96721FA7648C0076F8B5 /* WavReader */,
+				31A4FC211FB1D66B00F6BA41 /* Sine */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		31A4FC1E1FB1D66B00F6BA41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31A4FC2C1FB1DD3A00F6BA41 /* main.c in Sources */,
+				31A4FC2B1FB1D68800F6BA41 /* wavlib.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		31CF96631FA764420076F8B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,6 +251,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		31A4FC261FB1D66B00F6BA41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		31A4FC271FB1D66B00F6BA41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		31CF966C1FA764420076F8B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -340,6 +409,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		31A4FC281FB1D66B00F6BA41 /* Build configuration list for PBXNativeTarget "Sine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31A4FC261FB1D66B00F6BA41 /* Debug */,
+				31A4FC271FB1D66B00F6BA41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		31CF96621FA764420076F8B5 /* Build configuration list for PBXProject "SoundProgramming" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
