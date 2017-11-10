@@ -11,6 +11,14 @@
 		31A4FC2C1FB1DD3A00F6BA41 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31A4FC291FB1D68100F6BA41 /* main.c */; };
 		31C30ED51FB315A40046CAFE /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31C30ED41FB315A40046CAFE /* main.c */; };
 		31C30EDB1FB316200046CAFE /* wav_format.c in Sources */ = {isa = PBXBuildFile; fileRef = 31C30ED91FB316200046CAFE /* wav_format.c */; };
+		31C30EE31FB4875B0046CAFE /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31C30EE21FB4875B0046CAFE /* main.c */; };
+		31C30EEC1FB48C490046CAFE /* libportaudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C30EEB1FB48C490046CAFE /* libportaudio.a */; };
+		31C30EED1FB48CA10046CAFE /* wav_format.c in Sources */ = {isa = PBXBuildFile; fileRef = 31C30ED91FB316200046CAFE /* wav_format.c */; };
+		31C30EF11FB48F0C0046CAFE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C30EF01FB48EEB0046CAFE /* AudioToolbox.framework */; };
+		31C30EF21FB48F190046CAFE /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C30EEF1FB48EC80046CAFE /* CoreAudio.framework */; };
+		31C30EF41FB48F2D0046CAFE /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C30EF31FB48F210046CAFE /* AudioUnit.framework */; };
+		31C30EF71FB48F400046CAFE /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C30EF51FB48F3A0046CAFE /* Carbon.framework */; };
+		31C30EF81FB48F4B0046CAFE /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C30EF61FB48F3A0046CAFE /* CoreServices.framework */; };
 		31CF966B1FA764420076F8B5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31CF966A1FA764420076F8B5 /* main.c */; };
 		31CF967C1FA764B30076F8B5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31CF967B1FA764B30076F8B5 /* main.c */; };
 		31CF967F1FA7663E0076F8B5 /* wavlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 31CF967E1FA7663E0076F8B5 /* wavlib.c */; };
@@ -27,6 +35,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		31C30ED01FB315A40046CAFE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		31C30EDE1FB4875B0046CAFE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -62,6 +79,15 @@
 		31C30ED41FB315A40046CAFE /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		31C30ED91FB316200046CAFE /* wav_format.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wav_format.c; sourceTree = "<group>"; };
 		31C30EDA1FB316200046CAFE /* wav_format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wav_format.h; sourceTree = "<group>"; };
+		31C30EE01FB4875B0046CAFE /* WavePlayer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WavePlayer; sourceTree = BUILT_PRODUCTS_DIR; };
+		31C30EE21FB4875B0046CAFE /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		31C30EE91FB48C490046CAFE /* portaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portaudio.h; sourceTree = "<group>"; };
+		31C30EEB1FB48C490046CAFE /* libportaudio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libportaudio.a; sourceTree = "<group>"; };
+		31C30EEF1FB48EC80046CAFE /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		31C30EF01FB48EEB0046CAFE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		31C30EF31FB48F210046CAFE /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		31C30EF51FB48F3A0046CAFE /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		31C30EF61FB48F3A0046CAFE /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		31CF96671FA764420076F8B5 /* SoundProgramming */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SoundProgramming; sourceTree = BUILT_PRODUCTS_DIR; };
 		31CF966A1FA764420076F8B5 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		31CF967A1FA7648C0076F8B5 /* WavReader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WavReader; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +108,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31C30EDD1FB4875B0046CAFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31C30EF81FB48F4B0046CAFE /* CoreServices.framework in Frameworks */,
+				31C30EF71FB48F400046CAFE /* Carbon.framework in Frameworks */,
+				31C30EF41FB48F2D0046CAFE /* AudioUnit.framework in Frameworks */,
+				31C30EF21FB48F190046CAFE /* CoreAudio.framework in Frameworks */,
+				31C30EF11FB48F0C0046CAFE /* AudioToolbox.framework in Frameworks */,
+				31C30EEC1FB48C490046CAFE /* libportaudio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +151,52 @@
 			path = Tone;
 			sourceTree = "<group>";
 		};
+		31C30EE11FB4875B0046CAFE /* WavePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				31C30EE71FB48C490046CAFE /* portaudio */,
+				31C30EE21FB4875B0046CAFE /* main.c */,
+			);
+			path = WavePlayer;
+			sourceTree = "<group>";
+		};
+		31C30EE71FB48C490046CAFE /* portaudio */ = {
+			isa = PBXGroup;
+			children = (
+				31C30EE81FB48C490046CAFE /* include */,
+				31C30EEA1FB48C490046CAFE /* lib */,
+			);
+			path = portaudio;
+			sourceTree = "<group>";
+		};
+		31C30EE81FB48C490046CAFE /* include */ = {
+			isa = PBXGroup;
+			children = (
+				31C30EE91FB48C490046CAFE /* portaudio.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		31C30EEA1FB48C490046CAFE /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				31C30EEB1FB48C490046CAFE /* libportaudio.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		31C30EEE1FB48EC80046CAFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31C30EF51FB48F3A0046CAFE /* Carbon.framework */,
+				31C30EF61FB48F3A0046CAFE /* CoreServices.framework */,
+				31C30EF31FB48F210046CAFE /* AudioUnit.framework */,
+				31C30EF01FB48EEB0046CAFE /* AudioToolbox.framework */,
+				31C30EEF1FB48EC80046CAFE /* CoreAudio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		31CD18F61FADA1FC00BC2B0D /* Sine */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +210,7 @@
 			children = (
 				31CF96691FA764420076F8B5 /* SoundProgramming */,
 				31CF96681FA764420076F8B5 /* Products */,
+				31C30EEE1FB48EC80046CAFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +221,7 @@
 				31CF967A1FA7648C0076F8B5 /* WavReader */,
 				31A4FC221FB1D66B00F6BA41 /* Sine */,
 				31C30ED21FB315A40046CAFE /* Tone */,
+				31C30EE01FB4875B0046CAFE /* WavePlayer */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +229,7 @@
 		31CF96691FA764420076F8B5 /* SoundProgramming */ = {
 			isa = PBXGroup;
 			children = (
+				31C30EE11FB4875B0046CAFE /* WavePlayer */,
 				31C30ECD1FB313E20046CAFE /* Tone */,
 				31CD18F61FADA1FC00BC2B0D /* Sine */,
 				31CF96711FA7645E0076F8B5 /* WavReader */,
@@ -197,6 +285,23 @@
 			productReference = 31C30ED21FB315A40046CAFE /* Tone */;
 			productType = "com.apple.product-type.tool";
 		};
+		31C30EDF1FB4875B0046CAFE /* WavePlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31C30EE61FB4875B0046CAFE /* Build configuration list for PBXNativeTarget "WavePlayer" */;
+			buildPhases = (
+				31C30EDC1FB4875B0046CAFE /* Sources */,
+				31C30EDD1FB4875B0046CAFE /* Frameworks */,
+				31C30EDE1FB4875B0046CAFE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WavePlayer;
+			productName = WavePlayer;
+			productReference = 31C30EE01FB4875B0046CAFE /* WavePlayer */;
+			productType = "com.apple.product-type.tool";
+		};
 		31CF96661FA764420076F8B5 /* SoundProgramming */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31CF966E1FA764420076F8B5 /* Build configuration list for PBXNativeTarget "SoundProgramming" */;
@@ -248,6 +353,10 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
+					31C30EDF1FB4875B0046CAFE = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 					31CF96661FA764420076F8B5 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
@@ -273,6 +382,7 @@
 				31CF96721FA7648C0076F8B5 /* WavReader */,
 				31A4FC211FB1D66B00F6BA41 /* Sine */,
 				31C30ED11FB315A40046CAFE /* Tone */,
+				31C30EDF1FB4875B0046CAFE /* WavePlayer */,
 			);
 		};
 /* End PBXProject section */
@@ -293,6 +403,15 @@
 			files = (
 				31C30ED51FB315A40046CAFE /* main.c in Sources */,
 				31C30EDB1FB316200046CAFE /* wav_format.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31C30EDC1FB4875B0046CAFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31C30EE31FB4875B0046CAFE /* main.c in Sources */,
+				31C30EED1FB48CA10046CAFE /* wav_format.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +463,32 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		31C30EE41FB4875B0046CAFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/SoundProgramming/WavePlayer/portaudio/include";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SoundProgramming/WavePlayer/portaudio/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		31C30EE51FB4875B0046CAFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/SoundProgramming/WavePlayer/portaudio/include";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SoundProgramming/WavePlayer/portaudio/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -504,6 +649,15 @@
 			buildConfigurations = (
 				31C30ED71FB315A40046CAFE /* Debug */,
 				31C30ED81FB315A40046CAFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31C30EE61FB4875B0046CAFE /* Build configuration list for PBXNativeTarget "WavePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31C30EE41FB4875B0046CAFE /* Debug */,
+				31C30EE51FB4875B0046CAFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
