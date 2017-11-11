@@ -14,6 +14,10 @@
 #include <limits.h>
 
 #define PCM16 (16)
+#define PCM24 (24)
+
+#define FORMAT_CHUNK_PCM_SIZE (16)
+#define FRAMES_PER_BLOCK (64)
 
 typedef struct wav_format_pcm {
     uint8_t RIFF[4];          // 'RIFF'
@@ -36,6 +40,15 @@ static uint8_t WAVE_ID[4] = {'W', 'A', 'V', 'E'};
 static uint8_t FMT_ID[4] = {'f', 'm', 't', ' '};
 static uint8_t DATA_ID[4] = {'d', 'a', 't', 'a'};
 
+typedef struct wav_file_descriptor {
+    FILE *fp;            // file
+    uint64_t file_size;  // File size
+    uint64_t data_start; // Start position
+    uint64_t data_end;   // End position
+} wav_file_desc;
+
 extern void set_wav_header(wav_format *header, uint32_t fs, uint16_t channels, uint16_t n_bits, uint32_t data_bytes);
+extern int read_wav_header(wav_format *fmtdesc, wav_file_desc *filedesc);
+extern uint64_t read_sound(FILE *fp, void *sample_block, uint64_t n_samples, wav_format *fmt);
 
 #endif /* wav_format_h */
