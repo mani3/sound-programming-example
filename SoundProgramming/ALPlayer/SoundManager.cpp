@@ -14,7 +14,7 @@ extern "C" {
 }
 
 SoundManager::SoundManager() {
-    dict = map<string, SoundData>();
+    dict = map<string, std::shared_ptr<SoundData>>();
     device = alcOpenDevice(NULL);
     if (device != NULL) {
         context = alcCreateContext(device, 0);
@@ -35,7 +35,7 @@ SoundManager::~SoundManager() {
 }
 
 void SoundManager::load(string key, const char *path) {
-    SoundData *sound = new SoundData();
+    std::shared_ptr<SoundData> sound(new SoundData());
     alGenBuffers(1, sound->buffer());
     printf("alGenBuffers: %x\n", alGetError());
     
@@ -61,6 +61,6 @@ void SoundManager::load(string key, const char *path) {
         printf("ERROR - SoundManager: Could not find file '%s'", path);
     }
     sound->setGain(1.0f, false);
-    dict[key] = *sound;
+    dict[key] = sound;
 }
 

@@ -12,6 +12,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <memory>
 #include <OpenAL/al.h>
 #include <OpenAL/alc.h>
 
@@ -23,14 +24,14 @@ class SoundManager {
     ALenum alError;
     ALCcontext *context;
     ALCdevice *device;
-    map<string, SoundData> dict;
+    map<string, shared_ptr<SoundData>> dict;
 public:
     SoundManager();
     ~SoundManager();
     void load(string key, const char *path);
-    void play(string key) { dict[key].play(); };
-    void playback(string key) { dict[key].playback(); };
-    void stop(string key) { dict[key].stop(); };
+    void play(string key) { dict[key]->play(); };
+    void playback(string key) { dict[key]->playback(); };
+    void stop(string key) { dict[key]->stop(); };
 };
 
 #endif /* SoundManager_hpp */
