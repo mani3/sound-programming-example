@@ -30,6 +30,8 @@
 		31C30F211FB9E5990046CAFE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C30F061FB838A70046CAFE /* CoreFoundation.framework */; };
 		31C30F231FB9E7E20046CAFE /* MyOpenALSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = 31C30F221FB9E7E20046CAFE /* MyOpenALSupport.c */; };
 		31C30F241FB9F0870046CAFE /* SoundManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31C30F1C1FB9DD050046CAFE /* SoundManager.cpp */; };
+		31C30F2C1FBB2A960046CAFE /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31C30F2B1FBB2A960046CAFE /* main.c */; };
+		31C30F301FBB2B090046CAFE /* wavlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 31CF967E1FA7663E0076F8B5 /* wavlib.c */; };
 		31CF966B1FA764420076F8B5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31CF966A1FA764420076F8B5 /* main.c */; };
 		31CF967C1FA764B30076F8B5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31CF967B1FA764B30076F8B5 /* main.c */; };
 		31CF967F1FA7663E0076F8B5 /* wavlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 31CF967E1FA7663E0076F8B5 /* wavlib.c */; };
@@ -73,6 +75,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		31C30F0A1FB9D00B0046CAFE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		31C30F271FBB2A960046CAFE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -130,6 +141,8 @@
 		31C30F1D1FB9DD050046CAFE /* SoundManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SoundManager.hpp; sourceTree = "<group>"; };
 		31C30F1F1FB9E55F0046CAFE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		31C30F221FB9E7E20046CAFE /* MyOpenALSupport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyOpenALSupport.c; sourceTree = "<group>"; };
+		31C30F291FBB2A960046CAFE /* Waveform */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Waveform; sourceTree = BUILT_PRODUCTS_DIR; };
+		31C30F2B1FBB2A960046CAFE /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		31CF96671FA764420076F8B5 /* SoundProgramming */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SoundProgramming; sourceTree = BUILT_PRODUCTS_DIR; };
 		31CF966A1FA764420076F8B5 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		31CF967A1FA7648C0076F8B5 /* WavReader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WavReader; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +196,13 @@
 				31C30F201FB9E55F0046CAFE /* AVFoundation.framework in Frameworks */,
 				31C30F181FB9D0930046CAFE /* OpenAL.framework in Frameworks */,
 				31C30F161FB9D08C0046CAFE /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31C30F261FBB2A960046CAFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +304,14 @@
 			path = ALPlayer;
 			sourceTree = "<group>";
 		};
+		31C30F2A1FBB2A960046CAFE /* Waveform */ = {
+			isa = PBXGroup;
+			children = (
+				31C30F2B1FBB2A960046CAFE /* main.c */,
+			);
+			path = Waveform;
+			sourceTree = "<group>";
+		};
 		31CD18F61FADA1FC00BC2B0D /* Sine */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +339,7 @@
 				31C30EE01FB4875B0046CAFE /* WavePlayer */,
 				31C30EFE1FB827330046CAFE /* AQPlayer */,
 				31C30F0C1FB9D00B0046CAFE /* ALPlayer */,
+				31C30F291FBB2A960046CAFE /* Waveform */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -318,6 +347,7 @@
 		31CF96691FA764420076F8B5 /* SoundProgramming */ = {
 			isa = PBXGroup;
 			children = (
+				31C30F2A1FBB2A960046CAFE /* Waveform */,
 				31C30F0D1FB9D00B0046CAFE /* ALPlayer */,
 				31C30EFF1FB827330046CAFE /* AQPlayer */,
 				31C30EE11FB4875B0046CAFE /* WavePlayer */,
@@ -427,6 +457,23 @@
 			productReference = 31C30F0C1FB9D00B0046CAFE /* ALPlayer */;
 			productType = "com.apple.product-type.tool";
 		};
+		31C30F281FBB2A960046CAFE /* Waveform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31C30F2D1FBB2A960046CAFE /* Build configuration list for PBXNativeTarget "Waveform" */;
+			buildPhases = (
+				31C30F251FBB2A960046CAFE /* Sources */,
+				31C30F261FBB2A960046CAFE /* Frameworks */,
+				31C30F271FBB2A960046CAFE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Waveform;
+			productName = Waveform;
+			productReference = 31C30F291FBB2A960046CAFE /* Waveform */;
+			productType = "com.apple.product-type.tool";
+		};
 		31CF96661FA764420076F8B5 /* SoundProgramming */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31CF966E1FA764420076F8B5 /* Build configuration list for PBXNativeTarget "SoundProgramming" */;
@@ -490,6 +537,10 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
+					31C30F281FBB2A960046CAFE = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 					31CF96661FA764420076F8B5 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
@@ -518,6 +569,7 @@
 				31C30EDF1FB4875B0046CAFE /* WavePlayer */,
 				31C30EFD1FB827330046CAFE /* AQPlayer */,
 				31C30F0B1FB9D00B0046CAFE /* ALPlayer */,
+				31C30F281FBB2A960046CAFE /* Waveform */,
 			);
 		};
 /* End PBXProject section */
@@ -566,6 +618,15 @@
 				31C30F241FB9F0870046CAFE /* SoundManager.cpp in Sources */,
 				31C30F0F1FB9D00B0046CAFE /* main.cpp in Sources */,
 				31C30F1B1FB9DC540046CAFE /* SoundData.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31C30F251FBB2A960046CAFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31C30F301FBB2B090046CAFE /* wavlib.c in Sources */,
+				31C30F2C1FBB2A960046CAFE /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +733,22 @@
 			name = Debug;
 		};
 		31C30F121FB9D00B0046CAFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		31C30F2E1FBB2A960046CAFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		31C30F2F1FBB2A960046CAFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -862,6 +939,15 @@
 			buildConfigurations = (
 				31C30F111FB9D00B0046CAFE /* Debug */,
 				31C30F121FB9D00B0046CAFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31C30F2D1FBB2A960046CAFE /* Build configuration list for PBXNativeTarget "Waveform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31C30F2E1FBB2A960046CAFE /* Debug */,
+				31C30F2F1FBB2A960046CAFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
