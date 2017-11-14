@@ -20,44 +20,50 @@ typedef enum function {
     sawtooth,
     rectangle,
     pulse,
+    rm,
+    am,
+    fm_,
 } function;
 
 int main(int argc, const char * argv[]) {
     
-    int n_data, n_data_id, fmt_id;
-    double f, fs, amp, cons, cons1, cons2, xdash, *buffer;
+    double cons, cons1, cons2, xdash;
     
     short bits = 16;
-    char *fn;
     double pi = M_PI;
     wav_head bufhead;
     
-    if (argc != 7) {
-        printf("Usage: %s <func#> <n_data> <amp> <f> <fs> <filename>\n", argv[0]);
-        printf("  func#: 0: sine, 1: white noise, 2: triangular, 3: sawtooth, 4: rectangle, 5: pulse\n");
+    if (argc != 9) {
+        printf("Usage: %s <func#> <n_data> <amp> <f> <fs> <fm> <I> <filename>\n", argv[0]);
+        printf("  func#: 0: sine, 1: white noise, 2: triangular, 3: sawtooth, 4: rectangle, 5: pulse, 6: rm, 7: am, 8: fm\n");
         printf("  n_data  : the number of data\n");
         printf("  amp     : amplitude\n");
         printf("  f       : signal frequency in Hz\n");
         printf("  fs      : sampling frequency in Hz\n");
+        printf("  fm      : signal frequency in Hz\n");
+        printf("  I       : sampling frequency in Hz\n");
         printf("  filename: file name of sound\n");
-        printf(" e.g. ./%s 0 40000 10000 2000 44100 sine.wav\n", argv[0]);
+        printf(" e.g. ./%s 0 40000 10000 2000 44100 0 0 sine.wav\n", argv[0]);
         return 1;
     }
     
-    n_data_id = atoi(argv[2]);
-    n_data = abs(n_data_id);
-    fmt_id = n_data/n_data_id;
+    int n_data_id = atoi(argv[2]);
+    int n_data = abs(n_data_id);
+    int fmt_id = n_data/n_data_id;
     
-    buffer = calloc(n_data, sizeof(double));
+    double *buffer = calloc(n_data, sizeof(double));
     bufhead.data = calloc(n_data, sizeof(short));
-    fn = calloc(100, sizeof(char));
+    char *fn = calloc(100, sizeof(char));
     
     int func_n = atoi(argv[1]);
     function func = (function) func_n;
-    amp = atof(argv[3]);
-    f = atof(argv[4]);
-    fs = atof(argv[5]);
-    sscanf(argv[6], "%s", fn);
+    double amp = atof(argv[3]);
+    double f = atof(argv[4]);
+    double fs = atof(argv[5]);
+    double fm = atof(argv[6]);
+    double I = atof(argv[7]);
+    double fc = f;
+    sscanf(argv[8], "%s", fn);
     cons = fs / f;
     
     switch (func) {
@@ -96,6 +102,24 @@ int main(int argc, const char * argv[]) {
             for (int i = 0; i < n_data; i++) {
                 xdash = fmod((double)i, cons);
                 buffer[i] = xdash < cons1 ? amp : 0.;
+                bufhead.data[i] = (short)buffer[i];
+            }
+            break;
+        case rm:
+            for (int i = 0; i < n_data; i++) {
+                buffer[i] = amp * sin(2 * pi * fm * (double)i / fs) * sin(2. * pi * fc * (double)i / fs);
+                bufhead.data[i] = (short)buffer[i];
+            }
+            break;
+        case am:
+            for (int i = 0; i < n_data; i++) {
+                buffer[i] = amp * (0.5 * 0.5 * sin(2 * pi * fm * (double)i / fs)) * sin(2. * pi * fc * (double)i / fs);
+                bufhead.data[i] = (short)buffer[i];
+            }
+            break;
+        case fm_:
+            for (int i = 0; i < n_data; i++) {
+                buffer[i] = amp * sin(2. * pi * fc * (double)i / fs + I * sin(2 * pi * fm * (double)i / fs));
                 bufhead.data[i] = (short)buffer[i];
             }
             break;
