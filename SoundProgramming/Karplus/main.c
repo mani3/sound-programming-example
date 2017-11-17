@@ -23,7 +23,7 @@ int main(int argc, const char * argv[])
         printf("  f       : signal frequency in Hz\n");
         printf("  fs      : sampling frequency in Hz\n");
         printf("  filename: file name of sound\n");
-        printf(" e.g. %s 40000 10000 2000 44100 karplus.wav\n", argv[0]);
+        printf(" e.g. %s 40000 10000 261.626 44100 karplus.wav\n", argv[0]);
         return 1;
     }
     
