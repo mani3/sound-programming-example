@@ -11,6 +11,8 @@
 		31A4FC2C1FB1DD3A00F6BA41 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31A4FC291FB1D68100F6BA41 /* main.c */; };
 		31BFC4DD1FBEF5EA0033513B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31BFC4DC1FBEF5EA0033513B /* main.c */; };
 		31BFC4E11FBEF6450033513B /* wavlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 31CF967E1FA7663E0076F8B5 /* wavlib.c */; };
+		31BFC4E91FC319E60033513B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31BFC4E81FC319E60033513B /* main.c */; };
+		31BFC4ED1FC31B400033513B /* wavlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 31CF967E1FA7663E0076F8B5 /* wavlib.c */; };
 		31C30ED51FB315A40046CAFE /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31C30ED41FB315A40046CAFE /* main.c */; };
 		31C30EDB1FB316200046CAFE /* wav_format.c in Sources */ = {isa = PBXBuildFile; fileRef = 31C30ED91FB316200046CAFE /* wav_format.c */; };
 		31C30EE31FB4875B0046CAFE /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 31C30EE21FB4875B0046CAFE /* main.c */; };
@@ -50,6 +52,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		31BFC4D81FBEF5EA0033513B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		31BFC4E41FC319E60033513B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -128,6 +139,8 @@
 		31A4FC291FB1D68100F6BA41 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		31BFC4DA1FBEF5EA0033513B /* Karplus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Karplus; sourceTree = BUILT_PRODUCTS_DIR; };
 		31BFC4DC1FBEF5EA0033513B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		31BFC4E61FC319E60033513B /* KarplusDrum */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KarplusDrum; sourceTree = BUILT_PRODUCTS_DIR; };
+		31BFC4E81FC319E60033513B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		31C30ED21FB315A40046CAFE /* Tone */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tone; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C30ED41FB315A40046CAFE /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		31C30ED91FB316200046CAFE /* wav_format.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wav_format.c; sourceTree = "<group>"; };
@@ -173,6 +186,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		31BFC4D71FBEF5EA0033513B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31BFC4E31FC319E60033513B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -249,6 +269,14 @@
 				31BFC4DC1FBEF5EA0033513B /* main.c */,
 			);
 			path = Karplus;
+			sourceTree = "<group>";
+		};
+		31BFC4E71FC319E60033513B /* KarplusDrum */ = {
+			isa = PBXGroup;
+			children = (
+				31BFC4E81FC319E60033513B /* main.c */,
+			);
+			path = KarplusDrum;
 			sourceTree = "<group>";
 		};
 		31C30ECD1FB313E20046CAFE /* Tone */ = {
@@ -369,6 +397,7 @@
 				31C30F0C1FB9D00B0046CAFE /* ALPlayer */,
 				31C30F291FBB2A960046CAFE /* Waveform */,
 				31BFC4DA1FBEF5EA0033513B /* Karplus */,
+				31BFC4E61FC319E60033513B /* KarplusDrum */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -376,6 +405,7 @@
 		31CF96691FA764420076F8B5 /* SoundProgramming */ = {
 			isa = PBXGroup;
 			children = (
+				31BFC4E71FC319E60033513B /* KarplusDrum */,
 				31BFC4DB1FBEF5EA0033513B /* Karplus */,
 				31C30F2A1FBB2A960046CAFE /* Waveform */,
 				31C30F0D1FB9D00B0046CAFE /* ALPlayer */,
@@ -434,6 +464,23 @@
 			name = Karplus;
 			productName = Karplus;
 			productReference = 31BFC4DA1FBEF5EA0033513B /* Karplus */;
+			productType = "com.apple.product-type.tool";
+		};
+		31BFC4E51FC319E60033513B /* KarplusDrum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31BFC4EA1FC319E60033513B /* Build configuration list for PBXNativeTarget "KarplusDrum" */;
+			buildPhases = (
+				31BFC4E21FC319E60033513B /* Sources */,
+				31BFC4E31FC319E60033513B /* Frameworks */,
+				31BFC4E41FC319E60033513B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KarplusDrum;
+			productName = KarplusDrum;
+			productReference = 31BFC4E61FC319E60033513B /* KarplusDrum */;
 			productType = "com.apple.product-type.tool";
 		};
 		31C30ED11FB315A40046CAFE /* Tone */ = {
@@ -572,6 +619,10 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
+					31BFC4E51FC319E60033513B = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 					31C30ED11FB315A40046CAFE = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -622,6 +673,7 @@
 				31C30F0B1FB9D00B0046CAFE /* ALPlayer */,
 				31C30F281FBB2A960046CAFE /* Waveform */,
 				31BFC4D91FBEF5EA0033513B /* Karplus */,
+				31BFC4E51FC319E60033513B /* KarplusDrum */,
 			);
 		};
 /* End PBXProject section */
@@ -642,6 +694,15 @@
 			files = (
 				31BFC4E11FBEF6450033513B /* wavlib.c in Sources */,
 				31BFC4DD1FBEF5EA0033513B /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31BFC4E21FC319E60033513B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31BFC4ED1FC31B400033513B /* wavlib.c in Sources */,
+				31BFC4E91FC319E60033513B /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +798,24 @@
 			name = Debug;
 		};
 		31BFC4DF1FBEF5EA0033513B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		31BFC4EB1FC319E60033513B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		31BFC4EC1FC319E60033513B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -991,6 +1070,15 @@
 			buildConfigurations = (
 				31BFC4DE1FBEF5EA0033513B /* Debug */,
 				31BFC4DF1FBEF5EA0033513B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31BFC4EA1FC319E60033513B /* Build configuration list for PBXNativeTarget "KarplusDrum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31BFC4EB1FC319E60033513B /* Debug */,
+				31BFC4EC1FC319E60033513B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
